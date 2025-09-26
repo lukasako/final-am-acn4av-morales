@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="btn_height">52dp</dimen>
+    <dimen name="corner_radius">12dp</dimen>
+    <dimen name="title_text">20sp</dimen>
+    <dimen name="saldo_text">22sp</dimen>
+    <dimen name="amount_text">18sp</dimen>
+</resources>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GastApp</string>
+    <!-- string saludo -->
+    <string name="hello">Hola Lucas, ¿qué hiciste hoy?</string>
 </resources>

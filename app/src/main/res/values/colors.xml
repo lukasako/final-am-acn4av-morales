@@ -11,4 +11,11 @@
     <color name="primary_blue">#5D74EF</color>
     <color name="bg_light">#F5F6FA</color>
     <color name="button_text">#FFFFFF</color>
+    <!-- paleta de colores completa -->
+    <color name="accent_green">#42C77A</color>
+    <color name="text_primary">#2B2B2B</color>
+    <color name="text_secondary">#707070</color>
+    <color name="danger">#E45D5D</color>
+    <color name="item_bg">#FFFFFF</color>
+    <color name="item_bg_checked">#E8EEF9</color>
 </resources>
