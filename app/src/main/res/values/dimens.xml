@@ -6,6 +6,7 @@
     <dimen name="btn_height">52dp</dimen>
     <dimen name="corner_radius">12dp</dimen>
     <dimen name="title_text">20sp</dimen>
-    <dimen name="saldo_text">22sp</dimen>
+    <dimen name="saldo_text">20sp</dimen>
+    <dimen name="body_text">16sp</dimen>
     <dimen name="amount_text">18sp</dimen>
 </resources>
