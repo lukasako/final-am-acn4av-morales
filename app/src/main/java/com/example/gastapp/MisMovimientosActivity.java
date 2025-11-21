@@ -1,7 +1,9 @@
 package com.example.gastapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -13,6 +15,8 @@ import java.util.Locale;
 
 public class MisMovimientosActivity extends AppCompatActivity {
 
+    public static final int REQ_EDIT = 2001;
+
     private LinearLayout llMovimientosList;
 
     @Override
@@ -22,16 +26,18 @@ public class MisMovimientosActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarMovimientos);
         setSupportActionBar(toolbar);
+
         toolbar.setNavigationOnClickListener(v -> finish());
 
         llMovimientosList = findViewById(R.id.llMovimientosList);
 
         // Ejemplos
+        addMovementItem("Café", -250.0, "Gasto diario", "29/09/25", "Mercado Pago", false);
         addMovementItem("Sueldo", 300000.0, "Ingreso mensual", "05/09/25", "Efectivo", true);
-        addMovementItem("Gimnasio", -45500.0, "Suscripciones", "02/10/25", "Banco Galicia", false);
     }
 
-    private void addMovementItem(String titulo, double monto, String categoria, String fecha, String medioPago, boolean esIngreso) {
+    private void addMovementItem(String titulo, double monto, String categoria,
+                                 String fecha, String medioPago, boolean esIngreso) {
 
         View item = getLayoutInflater().inflate(R.layout.item_movimiento, llMovimientosList, false);
 
@@ -41,16 +47,33 @@ public class MisMovimientosActivity extends AppCompatActivity {
         TextView tvFecha = item.findViewById(R.id.tvFecha);
         TextView tvMedioPago = item.findViewById(R.id.tvMedioPago);
 
+        ImageView ivDelete = item.findViewById(R.id.ivDelete);
+        ImageView ivEdit = item.findViewById(R.id.ivEdit);
+
+        NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("es", "AR"));
+
         tvTitulo.setText(titulo);
-
-        // Formateo de monto
-        NumberFormat formato = NumberFormat.getCurrencyInstance(new Locale("es", "AR"));
-        tvMonto.setText(formato.format(Math.abs(monto)));
+        tvMonto.setText(nf.format(Math.abs(monto)));
         tvMonto.setTextColor(getResources().getColor(esIngreso ? R.color.accent_green : R.color.danger));
-
         tvCategoria.setText(categoria);
         tvFecha.setText(fecha);
         tvMedioPago.setText(medioPago);
+
+        // borrar movimiento
+        ivDelete.setOnClickListener(v -> llMovimientosList.removeView(item));
+
+        // editar movimiento → nueva activity
+        ivEdit.setOnClickListener(v -> {
+            Intent intent = new Intent(this, EditarMovimientoActivity.class);
+            intent.putExtra("titulo", titulo);
+            intent.putExtra("monto", monto);
+            intent.putExtra("categoria", categoria);
+            intent.putExtra("fecha", fecha);
+            intent.putExtra("medioPago", medioPago);
+            intent.putExtra("esIngreso", esIngreso);
+
+            startActivity(intent);
+        });
 
         llMovimientosList.addView(item, 0);
     }
