@@ -176,6 +176,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <!-- botones -->
             <Button
                 android:id="@+id/btnIngresar"
                 android:layout_width="match_parent"
@@ -212,37 +214,43 @@
                 android:text="@string/movimientos_fijos"
                 android:textColor="@color/button_text" />
 
-            <!-- lista dinnamica de gastos -->
-            <TextView
-                android:id="@+id/tvUltimosMovimientos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/titulo_utlimos_gastos"
-                android:textColor="@color/text_primary"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginBottom="8dp"/>
-
+            <!--  seccion ultimos movimientos -->
             <LinearLayout
-                android:id="@+id/llRecentList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"/>
+                android:orientation="vertical"
+                android:paddingTop="@dimen/padding_medium">
 
-            <!-- Botón Ver todos -->
-            <Button
-                android:id="@+id/btnVerTodos"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/ver_todos"
-                android:textColor="@color/primary_blue"
-                android:background="@android:color/transparent"
-                android:layout_gravity="center"
-                android:padding="8dp"
-                android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/tvUltimosMovimientos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Últimos movimientos"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
 
+                <LinearLayout
+                    android:id="@+id/llRecentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+                <Button
+                    android:id="@+id/btnVerTodos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver todos"
+                    android:textColor="@color/primary_blue"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:visibility="gone" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 
     <LinearLayout
         android:id="@+id/bottomNav"

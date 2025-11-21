@@ -1,6 +1,7 @@
 package com.example.gastapp;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         cardSaldo.setOnClickListener(v -> toggleCardView());
 
+
         //lista dinamica
         llRecentList = findViewById(R.id.llRecentList);
         Button btnIngresar = findViewById(R.id.btnIngresar);
@@ -60,6 +62,12 @@ public class MainActivity extends AppCompatActivity {
             //ejemplo, gasto en cafe y sueldo. En la app real se agrega desde pantalla ingresar movimiento
             addExpenseItem("Sueldo", 300000.0, "Ingreso mensual", "05/09/25", "Efectivo", true);
             addExpenseItem("Café", 250.0, "Gasto diario", "29/09/25", "Mercado Pago", false);
+        });
+
+        Button btnMovimientos = findViewById(R.id.btnMovimientos);
+        btnMovimientos.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, MisMovimientosActivity.class);
+            startActivity(intent);
         });
     }
 
