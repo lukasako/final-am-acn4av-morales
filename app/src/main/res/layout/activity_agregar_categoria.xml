@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_light">
+
+    <!-- toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarEditarCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_blue"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- titulo -->
+    <TextView
+        android:id="@+id/tvEditarCategoriaTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Editar Categoría"
+        android:textStyle="bold"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/text_primary"
+        app:layout_constraintTop_toBottomOf="@id/toolbarEditarCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- scroll -->
+    <ScrollView
+        android:id="@+id/scrollEditarCategoria"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvEditarCategoriaTitulo"
+        app:layout_constraintBottom_toTopOf="@id/btnGuardarCategoriaFinal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/containerEditarCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- etiqueta -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la categoría"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:paddingTop="12dp"/>
+
+            <!-- editar -->
+            <EditText
+                android:id="@+id/etCategoriaNombre"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_bg"
+                android:padding="12dp"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"
+                android:hint="Ingresá el nombre"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- boton -->
+    <Button
+        android:id="@+id/btnGuardarCategoriaFinal"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Guardar"
+        android:textColor="@color/button_text"
+        android:background="@drawable/rounded_button"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

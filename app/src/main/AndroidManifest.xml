@@ -22,6 +22,7 @@
         <activity android:name=".MisMovimientosActivity" />
         <activity android:name=".EditarMovimientoActivity" />
         <activity android:name=".CategoriasActivity" />
+        <activity android:name=".AgregarCategoriaActivity" />
     </application>
 
 </manifest>
