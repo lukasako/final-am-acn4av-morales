@@ -1,21 +1,56 @@
 package com.example.gastapp.models;
 
-public class Movimiento {
-    public String titulo;
-    public double monto;
-    public String categoria;
-    public String fecha;
-    public String medioPago;
-    public boolean esIngreso;
+import com.google.firebase.firestore.ServerTimestamp;
 
-    public Movimiento() {} // requerido por firebase
+import java.io.Serializable;
+import java.util.Date;
 
-    public Movimiento(String titulo, double monto, String categoria, String fecha, String medioPago, boolean esIngreso) {
+public class Movimiento implements Serializable {
+    private String id;
+    private String titulo;
+    private double monto;
+    private String categoriaId;
+    private String medioPagoId;
+    private String fecha;
+    private boolean esIngreso;
+    private boolean esFijo;
+    private Integer diaMovimientoFijo;
+    @ServerTimestamp
+    private Date createdAt;
+
+    public Movimiento() {}
+
+    public Movimiento(String titulo, double monto, String categoriaId, String medioPagoId,
+                      String fecha, boolean esIngreso, boolean esFijo, Integer diaMovimientoFijo) {
         this.titulo = titulo;
         this.monto = monto;
-        this.categoria = categoria;
+        this.categoriaId = categoriaId;
+        this.medioPagoId = medioPagoId;
         this.fecha = fecha;
-        this.medioPago = medioPago;
         this.esIngreso = esIngreso;
+        this.esFijo = esFijo;
+        this.diaMovimientoFijo = diaMovimientoFijo;
     }
+
+    // getters / setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
+    public String getTitulo() { return titulo; }
+    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public double getMonto() { return monto; }
+    public void setMonto(double monto) { this.monto = monto; }
+    public String getCategoriaId() { return categoriaId; }
+    public void setCategoriaId(String categoriaId) { this.categoriaId = categoriaId; }
+    public String getMedioPagoId() { return medioPagoId; }
+    public void setMedioPagoId(String medioPagoId) { this.medioPagoId = medioPagoId; }
+    public String getFecha() { return fecha; }
+    public void setFecha(String fecha) { this.fecha = fecha; }
+    public boolean isEsIngreso() { return esIngreso; }
+    public void setEsIngreso(boolean esIngreso) { this.esIngreso = esIngreso; }
+    public boolean isEsFijo() { return esFijo; }
+    public void setEsFijo(boolean esFijo) { this.esFijo = esFijo; }
+    public Integer getDiaMovimientoFijo() { return diaMovimientoFijo; }
+    public void setDiaMovimientoFijo(Integer diaMovimientoFijo) { this.diaMovimientoFijo = diaMovimientoFijo; }
+    public Date getCreatedAt() { return createdAt; }
+    public void setCreatedAt(Date createdAt) { this.createdAt = createdAt; }
 }

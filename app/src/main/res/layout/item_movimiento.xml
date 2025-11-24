@@ -8,7 +8,6 @@
     android:background="@drawable/item_bg"
     android:layout_marginBottom="8dp">
 
-    <!-- Primera fila: título + monto -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,7 +34,6 @@
             android:textSize="16sp"/>
     </LinearLayout>
 
-    <!-- Segunda fila: categoría + fecha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,7 +59,6 @@
             android:textSize="14sp"/>
     </LinearLayout>
 
-    <!-- Método de pago centrado -->
     <TextView
         android:id="@+id/tvMedioPago"
         android:layout_width="wrap_content"
@@ -73,7 +70,6 @@
         android:textStyle="bold"
         android:textSize="14sp"/>
 
-    <!-- Fila botones editar / borrar -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,8 +89,8 @@
             android:id="@+id/ivEdit"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:src="@drawable/ic_edit"
             android:layout_marginStart="16dp"
+            android:src="@drawable/ic_edit"
             android:contentDescription="Editar"/>
     </LinearLayout>
 
