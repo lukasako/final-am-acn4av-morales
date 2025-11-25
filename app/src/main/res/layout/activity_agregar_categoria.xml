@@ -6,80 +6,79 @@
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
-    <!-- toolbar -->
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarEditarCategoria"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/primary_blue"
         app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/editar_categoria"
+        app:titleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- titulo -->
+    <!-- Título -->
     <TextView
         android:id="@+id/tvEditarCategoriaTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Editar Categoría"
+        android:text="@string/editar_categoria"
         android:textStyle="bold"
-        android:textSize="26sp"
+        android:textSize="@dimen/text_title"
         android:gravity="center"
-        android:padding="16dp"
+        android:padding="@dimen/padding_screen"
         android:textColor="@color/text_primary"
         app:layout_constraintTop_toBottomOf="@id/toolbarEditarCategoria"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- scroll -->
+    <!-- Scroll Content -->
     <ScrollView
-        android:id="@+id/scrollEditarCategoria"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="16dp"
+        android:padding="@dimen/padding_screen"
         app:layout_constraintTop_toBottomOf="@id/tvEditarCategoriaTitulo"
         app:layout_constraintBottom_toTopOf="@id/btnGuardarCategoriaFinal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/containerEditarCategoria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- etiqueta -->
+            <!-- Label -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre de la categoría"
+                android:text="@string/nombre_categoria"
                 android:textStyle="bold"
                 android:textColor="@color/text_primary"
-                android:paddingTop="12dp"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-            <!-- editar -->
+            <!-- Campo -->
             <EditText
                 android:id="@+id/etCategoriaNombre"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/field_height"
                 android:background="@drawable/edittext_bg"
-                android:padding="12dp"
+                android:padding="@dimen/padding_field"
                 android:textColor="@color/text_primary"
                 android:textColorHint="@color/text_secondary"
-                android:hint="Ingresá el nombre"/>
+                android:hint="@string/hint_categoria"/>
         </LinearLayout>
     </ScrollView>
 
-    <!-- boton -->
+    <!-- Botón -->
     <Button
         android:id="@+id/btnGuardarCategoriaFinal"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:text="Guardar"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/guardar"
         android:textColor="@color/button_text"
         android:background="@drawable/rounded_button"
-        android:layout_margin="20dp"
+        android:layout_margin="@dimen/padding_screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

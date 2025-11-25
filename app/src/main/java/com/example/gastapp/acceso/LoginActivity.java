@@ -1,4 +1,4 @@
-package com.example.gastapp;
+package com.example.gastapp.acceso;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.gastapp.main.MainActivity;
+import com.example.gastapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {

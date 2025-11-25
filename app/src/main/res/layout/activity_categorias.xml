@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarCategorias"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/primary_blue"
-        android:title="Categorías"
+        android:title="@string/categorias"
         android:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Scroll con la lista -->
     <ScrollView
         android:id="@+id/scrollCategorias"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="16dp"
+        android:padding="@dimen/padding_screen"
         app:layout_constraintTop_toBottomOf="@id/toolbarCategorias"
         app:layout_constraintBottom_toTopOf="@id/btnAgregarCategoria"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,20 +34,20 @@
             android:id="@+id/llCategoriasList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"/>
     </ScrollView>
 
-    <!-- boton -->
+    <!-- Botón agregar -->
     <Button
         android:id="@+id/btnAgregarCategoria"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:text="Agregar categoría"
-        android:textColor="@color/white"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/agregar_categoria"
+        android:textColor="@color/button_text"
         android:background="@drawable/rounded_button"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_screen"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

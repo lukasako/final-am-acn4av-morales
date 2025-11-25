@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="12dp"
+    android:padding="@dimen/padding_small"
     android:background="@drawable/item_bg"
-    android:layout_marginBottom="8dp">
+    android:layout_marginBottom="@dimen/padding_small">
 
+    <!-- Primera fila: título + monto -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -22,7 +24,7 @@
             tools:text="Sueldazo"
             android:textColor="@color/text_primary"
             android:textStyle="bold"
-            android:textSize="16sp"/>
+            android:textSize="@dimen/text_lg" />
 
         <TextView
             android:id="@+id/tvMonto"
@@ -31,15 +33,16 @@
             tools:text="+$300.000"
             android:textColor="@color/accent_green"
             android:textStyle="bold"
-            android:textSize="16sp"/>
+            android:textSize="@dimen/text_lg" />
     </LinearLayout>
 
+    <!-- Segunda fila: categoría + fecha -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="@dimen/padding_xs">
 
         <TextView
             android:id="@+id/tvCategoria"
@@ -48,7 +51,7 @@
             android:layout_height="wrap_content"
             tools:text="Ingreso mensual"
             android:textColor="@color/text_secondary"
-            android:textSize="14sp"/>
+            android:textSize="@dimen/text_md" />
 
         <TextView
             android:id="@+id/tvFecha"
@@ -56,26 +59,28 @@
             android:layout_height="wrap_content"
             tools:text="05/09/25"
             android:textColor="@color/text_secondary"
-            android:textSize="14sp"/>
+            android:textSize="@dimen/text_md" />
     </LinearLayout>
 
+    <!-- Medio de pago -->
     <TextView
         android:id="@+id/tvMedioPago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="@dimen/padding_small"
         tools:text="Efectivo"
         android:textColor="@color/primary_blue"
         android:textStyle="bold"
-        android:textSize="14sp"/>
+        android:textSize="@dimen/text_md" />
 
+    <!-- Iconos editar / borrar -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/padding_md"
         android:gravity="center">
 
         <ImageView
@@ -83,15 +88,15 @@
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:src="@drawable/ic_delete"
-            android:contentDescription="Eliminar"/>
+            android:contentDescription="@string/btn_agregar" />
 
         <ImageView
             android:id="@+id/ivEdit"
             android:layout_width="28dp"
             android:layout_height="28dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/padding_medium"
             android:src="@drawable/ic_edit"
-            android:contentDescription="Editar"/>
+            android:contentDescription="@string/editar_categoria" />
     </LinearLayout>
 
 </LinearLayout>

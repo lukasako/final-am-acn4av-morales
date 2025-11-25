@@ -1,4 +1,4 @@
-package com.example.gastapp;
+package com.example.gastapp.main;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,13 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.example.gastapp.R;
+import com.example.gastapp.acceso.LoginActivity;
+import com.example.gastapp.categoria.CategoriasActivity;
+import com.example.gastapp.misCuentas.MisCuentasActivity;
+import com.example.gastapp.movimiento.AgregarMovimientoActivity;
+import com.example.gastapp.movimiento.MisMovimientosActivity;
+import com.example.gastapp.movimiento.MovimientosFijosActivity;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;

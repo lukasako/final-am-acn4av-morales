@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GastApp">
 
         <!-- login pasa a ser la primer pantalla -->
-        <activity android:name=".LoginActivity"
+        <activity android:name=".acceso.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -21,19 +21,19 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".MisMovimientosActivity" />
-        <activity android:name=".EditarMovimientoActivity" />
-        <activity android:name=".CategoriasActivity" />
-        <activity android:name=".AgregarCategoriaActivity" />
-        <activity android:name=".AgregarMovimientoActivity" />
-        <activity android:name=".EditarMovimientoActivity" />
-        <activity android:name=".MisMovimientosActivity" />
-        <activity android:name=".MisCuentasActivity" />
-        <activity android:name=".AgregarCuentaActivity" />
-        <activity android:name=".EditarCuentaActivity" />
-        <activity android:name=".MovimientosFijosActivity" />
+        <activity android:name=".acceso.RegisterActivity" />
+        <activity android:name=".main.MainActivity" />
+        <activity android:name=".movimiento.MisMovimientosActivity" />
+        <activity android:name=".movimiento.EditarMovimientoActivity" />
+        <activity android:name=".categoria.CategoriasActivity" />
+        <activity android:name=".categoria.AgregarCategoriaActivity" />
+        <activity android:name=".movimiento.AgregarMovimientoActivity" />
+        <activity android:name=".movimiento.EditarMovimientoActivity" />
+        <activity android:name=".movimiento.MisMovimientosActivity" />
+        <activity android:name=".misCuentas.MisCuentasActivity" />
+        <activity android:name=".misCuentas.AgregarCuentaActivity" />
+        <activity android:name=".misCuentas.EditarCuentaActivity" />
+        <activity android:name=".movimiento.MovimientosFijosActivity" />
 
 
 

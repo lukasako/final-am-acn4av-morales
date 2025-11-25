@@ -6,34 +6,38 @@
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarFijos"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/toolbar_height"
         android:background="@color/primary_blue"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Título -->
     <TextView
         android:id="@+id/tvTituloFijos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Movimientos Fijos"
-        android:textSize="28sp"
+        android:text="@string/movimientos_fijos"
+        android:textSize="@dimen/text_title_large"
         android:textStyle="bold"
         android:gravity="center"
-        android:padding="16dp"
+        android:textColor="@color/text_primary"
+        android:padding="@dimen/padding_medium"
         app:layout_constraintTop_toBottomOf="@id/toolbarFijos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Lista -->
     <ScrollView
         android:id="@+id/scrollFijos"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="12dp"
+        android:padding="@dimen/padding_small"
         app:layout_constraintTop_toBottomOf="@id/tvTituloFijos"
         app:layout_constraintBottom_toTopOf="@id/btnAddFijo"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,21 +45,23 @@
 
         <LinearLayout
             android:id="@+id/llFijosList"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_height="wrap_content" />
 
     </ScrollView>
 
+    <!-- Botón Agregar -->
     <Button
         android:id="@+id/btnAddFijo"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_margin="24dp"
-        android:text="Agregar"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="@dimen/padding_large"
+        android:text="@string/btn_agregar"
         android:textColor="@color/button_text"
         android:background="@drawable/rounded_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

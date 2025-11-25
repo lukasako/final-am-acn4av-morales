@@ -1,4 +1,4 @@
-package com.example.gastapp;
+package com.example.gastapp.misCuentas;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,12 +9,12 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.gastapp.R;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 
 public class AgregarCuentaActivity extends AppCompatActivity {

@@ -4,30 +4,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFF4">
+    android:background="@color/bg_light">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarEditarMov"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/toolbar_height"
         android:background="@color/primary_blue"
         app:navigationIcon="@drawable/ic_arrow_back"
-        app:title=""
+        app:title="@string/app_name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Título -->
     <TextView
         android:id="@+id/tvEditarTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Editar Movimiento"
-        android:textSize="26sp"
-        android:gravity="center"
+        android:text="@string/titulo_editar_movimiento"
+        android:textSize="@dimen/text_title_large"
         android:textStyle="bold"
-        android:textColor="#3A3A3A"
-        android:paddingTop="12dp"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:paddingTop="@dimen/padding_md"
         app:layout_constraintTop_toBottomOf="@id/toolbarEditarMov"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -36,7 +37,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="20dp"
+        android:padding="@dimen/padding_screen"
         app:layout_constraintTop_toBottomOf="@id/tvEditarTitulo"
         app:layout_constraintBottom_toTopOf="@id/btnConfirm"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,145 +51,97 @@
 
             <!-- Categoría -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categoría"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="14dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/categoria"/>
 
             <AutoCompleteTextView
                 android:id="@+id/categoriaPickerEdit"
+                style="@style/InputDropdown"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:hint="Seleccionar"
-                android:paddingHorizontal="20dp"
+                android:hint="@string/hint_seleccionar"
                 android:drawableEnd="@drawable/ic_arrow_down"
-                android:drawablePadding="10dp"
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:drawablePadding="@dimen/padding_sm"/>
 
             <!-- Nombre -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/campo_nombre"/>
 
             <EditText
                 android:id="@+id/etNombreEdit"
+                style="@style/InputText"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingHorizontal="20dp"
-                android:hint="Ingresar nombre..."
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:hint="@string/hint_nombre_movimiento"/>
 
             <!-- Movimiento fijo -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Es movimiento fijo"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/movimiento_fijo"/>
 
             <AutoCompleteTextView
                 android:id="@+id/esFijoPickerEdit"
+                style="@style/InputDropdown"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:hint="Seleccionar"
-                android:paddingHorizontal="20dp"
+                android:hint="@string/hint_seleccionar"
                 android:drawableEnd="@drawable/ic_arrow_down"
-                android:drawablePadding="10dp"
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:drawablePadding="@dimen/padding_sm"/>
 
             <!-- Cuenta -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cuenta del movimiento"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/cuenta"/>
 
             <AutoCompleteTextView
                 android:id="@+id/medioPagoPickerEdit"
+                style="@style/InputDropdown"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:hint="Seleccionar"
-                android:paddingHorizontal="20dp"
+                android:hint="@string/hint_seleccionar_cuenta"
                 android:drawableEnd="@drawable/ic_arrow_down"
-                android:drawablePadding="10dp"
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:drawablePadding="@dimen/padding_sm"/>
 
             <!-- Tipo -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipo de movimiento"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/tipo"/>
 
             <AutoCompleteTextView
                 android:id="@+id/tipoPickerEdit"
+                style="@style/InputDropdown"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:hint="Ingreso"
-                android:paddingHorizontal="20dp"
+                android:hint="@string/hint_seleccionar"
                 android:drawableEnd="@drawable/ic_arrow_down"
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:drawablePadding="@dimen/padding_sm"/>
 
             <!-- Importe -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Importe"
-                android:textColor="#444"
-                android:textStyle="bold"
-                android:paddingTop="16dp"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/monto"/>
 
             <EditText
                 android:id="@+id/etMontoEdit"
+                style="@style/InputText"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
                 android:inputType="numberDecimal"
-                android:paddingHorizontal="20dp"
-                android:hint="Importe"
-                android:textColor="#333"
-                android:textColorHint="#999"/>
+                android:hint="@string/hint_monto"/>
 
             <!-- Fecha -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fecha"
-                android:textStyle="bold"
-                android:paddingTop="16dp"
-                android:textColor="@color/text_primary"/>
+                style="@style/LabelStyle"
+                android:paddingTop="@dimen/section_spacing"
+                android:text="@string/fecha"/>
 
             <EditText
                 android:id="@+id/etFechaEdit"
+                style="@style/InputText"
                 android:layout_width="300dp"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:padding="14dp"
                 android:focusable="false"
-                android:hint="dd/mm/aa"
-                android:textColor="@color/text_primary"
-                android:textColorHint="@color/text_secondary"/>
+                android:hint="@string/hint_fecha"/>
 
         </LinearLayout>
     </ScrollView>
@@ -197,12 +150,12 @@
     <Button
         android:id="@+id/btnConfirm"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_margin="24dp"
-        android:text="Confirmar"
-        android:textColor="#FFF"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="@dimen/padding_large"
+        android:text="@string/confirmar"
+        android:textColor="@color/button_text"
         android:background="@drawable/bg_button_pill"
-        android:textSize="20sp"
+        android:textSize="@dimen/text_lg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

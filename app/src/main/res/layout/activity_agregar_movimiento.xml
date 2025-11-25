@@ -4,17 +4,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EFEFF4">
+    android:background="@color/bg_light">
 
     <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarAgregarMov"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="@dimen/toolbar_height"
         android:background="@color/primary_blue"
-        app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_arrow_back"
-        app:title=""
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -23,20 +22,21 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Ingresar Movimiento"
-        android:textSize="24sp"
+        android:text="@string/movimiento_agregar_titulo"
+        android:textSize="@dimen/title_size"
         android:textStyle="bold"
+        android:textColor="@color/text_primary"
         android:gravity="center"
-        android:padding="12dp"
+        android:padding="@dimen/padding_l"
         app:layout_constraintTop_toBottomOf="@id/toolbarAgregarMov"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Contenido -->
+    <!-- Contenido scrollable -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="20dp"
+        android:padding="@dimen/padding_l"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintBottom_toTopOf="@id/btnAgregar"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,145 +49,94 @@
 
             <!-- Categoría -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categoría"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/categoria"
+                android:layout_width="match_parent" />
 
             <AutoCompleteTextView
                 android:id="@+id/categoriaPicker"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:hint="Seleccionar categoría"
-                android:paddingLeft="14dp"
-                android:dropDownHeight="wrap_content"
-                android:inputType="none"/>
-
+                style="@style/InputDropdown"
+                android:hint="@string/hint_seleccionar_categoria" />
 
             <!-- Nombre -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nombre"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/nombre"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <EditText
                 android:id="@+id/etNombre"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
-                android:hint="Ej: Supermercado"/>
-
+                style="@style/InputText"
+                android:hint="@string/hint_nombre_movimiento"/>
 
             <!-- Movimiento fijo -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Movimiento fijo"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/movimiento_fijo"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <AutoCompleteTextView
                 android:id="@+id/esFijoPicker"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
-                android:hint="Seleccionar"
-                android:inputType="none"/>
-
+                style="@style/InputDropdown"
+                android:hint="@string/hint_seleccionar"/>
 
             <!-- Cuenta -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cuenta"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/cuenta"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <AutoCompleteTextView
                 android:id="@+id/medioPagoPicker"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
-                android:hint="Seleccionar cuenta"
-                android:inputType="none"/>
-
+                style="@style/InputDropdown"
+                android:hint="@string/hint_seleccionar_cuenta"/>
 
             <!-- Tipo -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipo"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/tipo"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <AutoCompleteTextView
                 android:id="@+id/tipoPicker"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
-                android:hint="Seleccionar"
-                android:inputType="none"/>
-
+                style="@style/InputDropdown"
+                android:hint="@string/hint_seleccionar"/>
 
             <!-- Monto -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Monto"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/monto"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <EditText
                 android:id="@+id/etMonto"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
-                android:hint="0.00"
+                style="@style/InputText"
+                android:hint="@string/hint_monto"
                 android:inputType="numberDecimal"/>
-
 
             <!-- Fecha -->
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fecha"
-                android:paddingTop="16dp"
-                android:textStyle="bold"
-                android:textColor="#444"/>
+                style="@style/LabelStyle"
+                android:text="@string/fecha"
+                android:paddingTop="@dimen/section_spacing"/>
 
             <EditText
                 android:id="@+id/etFechaAdd"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@drawable/bg_input"
-                android:paddingLeft="14dp"
+                style="@style/InputText"
                 android:focusable="false"
-                android:hint="dd/mm/aa"/>
+                android:hint="@string/hint_fecha"/>
         </LinearLayout>
 
     </ScrollView>
 
+    <!-- Botón Confirmar -->
     <Button
         android:id="@+id/btnAgregar"
         android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
-        android:text="Confirmar"
-        android:textColor="#fff"
+        android:layout_height="@dimen/btn_height"
+        android:layout_margin="@dimen/padding_l"
+        android:text="@string/confirmar"
+        android:textColor="@color/button_text"
         android:background="@drawable/bg_button_pill"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,87 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_blue">
 
-    <!-- fondo blanco -->
+    <!-- Fondo blanco -->
     <LinearLayout
         android:id="@+id/containerLogin"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:background="@color/white"
-        android:padding="24dp"
+        android:padding="@dimen/padding_large"
         android:elevation="6dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/padding_xxl"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <!-- titulo -->
+        <!-- Título -->
         <TextView
             android:id="@+id/tvLoginTitulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Iniciar sesión"
-            android:textSize="24sp"
+            android:text="@string/login_titulo"
+            android:textSize="@dimen/text_title"
             android:textStyle="bold"
             android:gravity="center"
-            android:paddingBottom="20dp"
+            android:paddingBottom="@dimen/padding_large"
             android:textColor="@color/text_primary" />
 
-        <!-- mail -->
+        <!-- Mail -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mail"
+            android:text="@string/login_email"
             android:textColor="@color/text_primary"
             android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/etLoginMail"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/input_height"
             android:background="@drawable/edittext_bg"
             android:hint="ejemplo@ejemplo.com"
-            android:padding="12dp"
+            android:padding="@dimen/input_padding"
             android:inputType="textEmailAddress" />
 
-        <!-- password -->
+        <!-- Password -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contraseña"
-            android:layout_marginTop="20dp"
+            android:text="@string/login_password"
+            android:layout_marginTop="@dimen/padding_large"
             android:textColor="@color/text_primary"
             android:textStyle="bold"/>
 
         <EditText
             android:id="@+id/etLoginPass"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/input_height"
             android:background="@drawable/edittext_bg"
-            android:padding="12dp"
+            android:padding="@dimen/input_padding"
             android:inputType="textPassword"
             android:hint="******" />
 
-        <!-- boton -->
+        <!-- Botón Ingresar -->
         <Button
             android:id="@+id/btnIngresar"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="30dp"
-            android:text="Ingresar"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/padding_large"
+            android:text="@string/login_btn"
             android:textColor="@color/white"
             android:background="@drawable/rounded_button" />
 
-        <!-- boton -->
+        <!-- Botón Crear cuenta -->
         <Button
             android:id="@+id/btnIrCrearCuenta"
             android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="16dp"
-            android:text="Crear cuenta"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginTop="@dimen/padding_md"
+            android:text="@string/register_titulo"
             android:textColor="@color/white"
             android:background="@drawable/rounded_green" />
 

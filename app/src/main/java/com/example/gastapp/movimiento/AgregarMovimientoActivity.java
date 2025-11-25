@@ -1,8 +1,7 @@
-package com.example.gastapp;
+package com.example.gastapp.movimiento;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -12,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.example.gastapp.R;
 import com.example.gastapp.models.Movimiento;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentSnapshot;

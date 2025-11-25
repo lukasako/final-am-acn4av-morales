@@ -7,17 +7,16 @@
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/topAppBar"
         style="@style/Widget.GastApp.Toolbar"
         android:layout_width="0dp"
-        android:layout_height="73dp"
+        android:layout_height="@dimen/toolbar_height"
         app:layout_constraintBottom_toTopOf="@+id/headerLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imgNavLogo"
@@ -33,14 +32,15 @@
             android:layout_height="50dp"
             android:layout_gravity="end"
             android:background="@android:color/transparent"
-            android:padding="10dp"
+            android:padding="@dimen/padding_sm"
             android:src="@drawable/ic_logout"
             app:tint="@color/button_text" />
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <!-- Header -->
     <LinearLayout
         android:id="@+id/headerLayout"
-        android:layout_width="401dp"
+        android:layout_width="match_parent"
         android:layout_height="146dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
@@ -66,9 +66,10 @@
             android:textSize="@dimen/title_text" />
     </LinearLayout>
 
+    <!-- Card de Saldo -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardSaldo"
-        android:layout_width="365dp"
+        android:layout_width="match_parent"
         android:layout_height="202dp"
         android:layout_marginStart="@dimen/padding_medium"
         android:layout_marginEnd="@dimen/padding_medium"
@@ -80,13 +81,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="236dp"
             android:padding="@dimen/padding_medium">
 
             <LinearLayout
                 android:id="@+id/layoutSaldo"
-                android:layout_width="347dp"
-                android:layout_height="187dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:padding="@dimen/padding_medium">
@@ -110,7 +111,7 @@
                     android:textStyle="bold" />
 
                 <LinearLayout
-                    android:layout_width="350dp"
+                    android:layout_width="match_parent"
                     android:layout_height="37dp"
                     android:layout_marginTop="@dimen/padding_large"
                     android:gravity="center"
@@ -126,7 +127,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="330dp"
+                    android:layout_width="match_parent"
                     android:layout_height="41dp"
                     android:layout_marginTop="@dimen/padding_small"
                     android:gravity="center"
@@ -136,7 +137,7 @@
                         android:id="@+id/tvMonthUp"
                         android:layout_width="wrap_content"
                         android:layout_height="45dp"
-                        android:layout_marginEnd="16dp"
+                        android:layout_marginEnd="@dimen/padding_md"
                         android:text="@string/saldo_mes_ingreso"
                         android:textColor="@color/accent_green"
                         android:textSize="@dimen/title_text" />
@@ -152,6 +153,7 @@
 
             </LinearLayout>
 
+            <!-- Gráfico (oculto hasta cargar) -->
             <LinearLayout
                 android:id="@+id/layoutGrafico"
                 android:layout_width="match_parent"
@@ -169,6 +171,8 @@
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
+
+    <!-- Scroll principal -->
     <ScrollView
         android:id="@+id/scrollMain"
         android:layout_width="match_parent"
@@ -231,11 +235,11 @@
                     android:id="@+id/tvUltimosMovimientos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Últimos movimientos"
+                    android:text="@string/titulo_ultimos_gastos"
                     android:textColor="@color/text_primary"
                     android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:layout_marginBottom="8dp"/>
+                    android:textSize="@dimen/text_xl"
+                    android:layout_marginBottom="@dimen/padding_sm"/>
 
                 <LinearLayout
                     android:id="@+id/llRecentList"
@@ -247,16 +251,17 @@
                     android:id="@+id/btnVerTodos"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ver todos"
+                    android:text="@string/ver_todos"
                     android:textColor="@color/primary_blue"
                     android:background="@android:color/transparent"
                     android:layout_gravity="center"
-                    android:padding="8dp"
+                    android:padding="@dimen/padding_sm"
                     android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
+    <!-- Bottom nav -->
     <LinearLayout
         android:id="@+id/bottomNav"
         android:layout_width="0dp"

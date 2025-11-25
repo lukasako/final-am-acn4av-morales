@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_light">
 
+    <!-- Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbarEditarCuenta"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/primary_blue"
+        android:title="@string/editar_cuenta"
+        android:titleTextColor="@color/white"
         app:navigationIcon="@drawable/ic_arrow_back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Título -->
     <TextView
         android:id="@+id/tvEditarCuentaTitulo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Editar Cuenta"
-        android:textSize="26sp"
+        android:text="@string/editar_cuenta"
+        android:textColor="@color/text_primary"
         android:textStyle="bold"
+        android:textSize="@dimen/title_size"
         android:gravity="center"
-        android:padding="20dp"
+        android:padding="@dimen/padding_large"
         app:layout_constraintTop_toBottomOf="@id/toolbarEditarCuenta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- Formulario -->
     <ScrollView
+        android:id="@+id/scrollEditarCuenta"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:padding="20dp"
+        android:padding="@dimen/padding_screen"
         app:layout_constraintTop_toBottomOf="@id/tvEditarCuentaTitulo"
         app:layout_constraintBottom_toTopOf="@id/btnConfirmEditCuenta"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,47 +52,55 @@
 
             <!-- Nombre -->
             <TextView
-                android:text="Nombre"
+                android:text="@string/nombre"
                 android:textStyle="bold"
+                android:textColor="@color/text_primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <EditText
                 android:id="@+id/etNombreCuentaEdit"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:background="@drawable/edittext_bg"
-                android:padding="12dp"
-                android:hint="Banco Nación"/>
+                android:padding="@dimen/padding_input"
+                android:hint="@string/hint_nombre_cuenta"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
 
             <!-- Monto -->
             <TextView
-                android:layout_marginTop="16dp"
-                android:text="Monto Actual"
+                android:layout_marginTop="@dimen/margin_section"
+                android:text="@string/monto_actual"
                 android:textStyle="bold"
+                android:textColor="@color/text_primary"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
             <EditText
                 android:id="@+id/etMontoCuentaEdit"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="@dimen/input_height"
                 android:background="@drawable/edittext_bg"
-                android:padding="12dp"
+                android:padding="@dimen/padding_input"
                 android:inputType="numberDecimal"
-                android:hint="15000"/>
+                android:hint="@string/hint_monto"
+                android:textColor="@color/text_primary"
+                android:textColorHint="@color/text_secondary"/>
         </LinearLayout>
     </ScrollView>
 
+    <!-- Botón confirmar -->
     <Button
         android:id="@+id/btnConfirmEditCuenta"
         android:layout_width="0dp"
-        android:layout_height="56dp"
-        android:layout_margin="24dp"
-        android:text="Confirmar"
+        android:layout_height="@dimen/button_height"
+        android:text="@string/confirmar"
         android:textColor="@color/button_text"
         android:background="@drawable/rounded_button"
+        android:layout_margin="@dimen/margin_screen"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- App -->
     <string name="app_name">GastApp</string>
-    <!-- reemplazo el string de saludo por un array con saludos distintos -->
+
+    <!-- Saludos -->
     <string name="default_greeting">, ¿cómo estás?</string>
     <string-array name="greetings">
         <item>, ¿pediste delivery?</item>
@@ -9,18 +13,88 @@
         <item>, ¿te diste un gustito hoy?</item>
         <item>, ¿te tomaste un uber?</item>
     </string-array>
-    <!-- strings de saldos -->
-    <string name="mes_actual">Cargando...</string>
+
+    <!-- Home -->
     <string name="saldo_total">Saldo Total</string>
     <string name="saldo_inicial">Cargando...</string>
     <string name="saldo_mes_ingreso">Cargando...</string>
     <string name="saldo_mes_egreso">Cargando...</string>
-    <!-- strings de botones -->
-    <string name="ingresar_gasto">Ingresar</string>
-    <string name="movimientos">Movimientos</string>
+    <string name="mes_actual">Cargando...</string>
+    <string name="titulo_ultimos_gastos">Últimos gastos</string>
+    <string name="ver_todos">Ver todos</string>
+
+    <!-- Botones Home -->
+    <string name="btn_ingresar_gasto">Ingresar</string>
+    <string name="btn_movimientos">Movimientos</string>
+    <string name="btn_categorias">Categorías</string>
+    <string name="btn_mov_fijos">Movimientos fijos</string>
+    <string name="btn_mis_cuentas">Mis cuentas</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Iniciar sesión</string>
+    <string name="login_email">Correo electrónico</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_btn">Ingresar</string>
+    <string name="login_register_redirect">¿No tenés cuenta? Registrate</string>
+
+    <!-- Register -->
+    <string name="register_titulo">Crear cuenta</string>
+    <string name="register_btn">Registrarse</string>
+
+    <!-- Categorías -->
     <string name="categorias">Categorías</string>
+    <string name="titulo_categorias">Categorías</string>
+    <string name="agregar_categoria">Agregar categoría</string>
+    <string name="btn_agregar_categoria">Agregar categoría</string>
+    <string name="editar_categoria">Editar categoría</string>
+    <string name="nombre_categoria">Nombre de la categoría</string>
+    <string name="hint_categoria">Ingresá el nombre</string>
+
+    <!-- Movimientos -->
+    <string name="movimiento_agregar_titulo">Agregar Movimiento</string>
+    <string name="titulo_ingresar_movimiento">Ingresar Movimiento</string>
+    <string name="titulo_editar_movimiento">Editar Movimiento</string>
+
+    <string name="categoria">Categoría</string>
+    <string name="hint_seleccionar_categoria">Seleccionar categoría</string>
+
+    <string name="campo_nombre">Nombre</string>
+    <string name="hint_nombre_movimiento">Nombre del movimiento</string>
+
+    <string name="movimiento_fijo">Movimiento fijo</string>
+
+    <string name="cuenta">Cuenta</string>
+    <string name="hint_seleccionar_cuenta">Seleccionar cuenta</string>
+
+    <string name="tipo">Tipo</string>
+
+    <string name="monto">Monto</string>
+
+    <string name="fecha">Fecha</string>
+
+    <!-- Mis cuentas -->
+    <string name="titulo_mis_cuentas">Mis cuentas</string>
+    <string name="btn_agregar_cuenta">Agregar cuenta</string>
+    <string name="agregar_cuenta">Agregar cuenta</string>
+    <string name="editar_cuenta">Editar cuenta</string>
+    <string name="nombre">Nombre</string>
+    <string name="monto_actual">Monto actual</string>
+    <string name="hint_nombre_cuenta">Ej: Mercado Pago</string>
+    <string name="hint_monto">0</string>
+    <string name="hint_cuenta">Nombre de la cuenta</string>
+
+    <!-- Botones genéricos -->
+    <string name="confirmar">Confirmar</string>
+    <string name="guardar">Guardar</string>
+    <string name="btn_agregar">Agregar</string>
+
+
+    <string name="hint_seleccionar">Seleccionar</string>
+    <string name="hint_password">******</string>
+    <string name="hint_fecha">dd/mm/aa</string>
+    <string name="ingresar_gasto">Ingresar gasto</string>
+    <string name="movimientos">Movimientos</string>
     <string name="movimientos_fijos">Movimientos fijos</string>
     <string name="descripcion_cuentas">Mis cuentas</string>
-    <string name="ver_todos">Ver Todos</string>
-    <string name="titulo_utlimos_gastos">Ultimos Gastos</string>
+
 </resources>
