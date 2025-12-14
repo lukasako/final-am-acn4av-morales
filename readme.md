@@ -52,8 +52,9 @@ El diseño inicial fue realizado en **Canva**, simulando la vista final de la pa
 
 ## Links importantes
 
-- **Repositorio GitHub**: https://github.com/lukasako/parcial-2-am-acn4av-morales
-- **Todos los archivos relevantes para el informe (google drive)**: https://drive.google.com/drive/u/2/folders/1OsCaO-_BjtSKJLOdMi-amaJm8SmkUwyy
+- **Repositorio GitHub**: [https://github.com/lukasako/parcial-2-am-acn4av-morales](https://github.com/lukasako/final-am-acn4av-morales)
+- **Todos los archivos relevantes para el informe (google drive)**: https://drive.google.com/file/d/1hPmJGzahJYZn-O26sT8wvqwOcTY7TULI/view?usp=sharing
+- **Enlace informe**: https://drive.google.com/file/d/1hPmJGzahJYZn-O26sT8wvqwOcTY7TULI/view?usp=drive_link
 
 ---
 
